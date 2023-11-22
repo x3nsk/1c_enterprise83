@@ -6,8 +6,8 @@ if test "$CARCH" == x86_64; then
 else
     _pkgarch1c=('i386')		# Если собираем пакеты для 32 бит
 fi
-pkgver=8.3.23        # Поменяйте на вашу версию
-pkgrel=1782          # Поменяйте на вашу версию
+pkgver=8.3.24        # Поменяйте на вашу версию
+pkgrel=1308          # Поменяйте на вашу версию
 _pkgname1c=1c-enterprise-$pkgver.$pkgrel
 pkgdesc="1C 8.3 for Linux"
 license=('custom')
@@ -33,16 +33,16 @@ $_pkgname1c-ws-$pkgver-$pkgrel.$_pkgarch1c.rpm
 $_pkgname1c-ws-nls-$pkgver-$pkgrel.$_pkgarch1c.rpm
 )
 
-md5sums=('2fe4dd00edf0981b708b86a06c9f24ae'
-         '20cf0917a30a8fdaee42627b49595882'
-         'b6a4644aaf038ff6086e2592486767eb'
-         '62be05552eba781980d06f23bc8a3d8b'
-         '50a49bc3602e5bd016c0e7f66bdb60fc'
-         '9cd27390d4112ba2bd596a57a0006ceb'
-         '49d3c575aa34db6cf4d2f6b3d524fb36'
-         '8f5f55fca1aa9b904838191af761f0a5'
-         'b285e9f96ca45fd4373513027e5f8d29'
-         'c9fec17251c8527be706160f96e40e78')
+md5sums=('772c0e5ee93b7856ed95ac04c5061e46'
+         '7f7267126c0c09f5877549690dc30b85'
+         'b72c6e15e5288186a0e7bb9b9550589e'
+         'bdf1d88b693d64604a00ee185d7397bd'
+         'ffb0f5fb98b88d592bf0b0e5a86fdf22'
+         '1fe613d5c494bcdd51aa5c76ca7c8108'
+         'fa9c2411f492fbc438c67ca9d147b082'
+         'e51b3d2778c6b1aca116f81fcbe0c494'
+         'c62b96ced0db5bf94bc59cf5c7332525'
+         '747231c43def025d71ea3931cc2155ac')
 package() {
    cd $pkgdir
    rm -f $srcdir/opt/1cv8/$arch/$pkgver.$pkgrel/libstdc++.so.6
