@@ -7,7 +7,7 @@ else
     _pkgarch1c=('i386')		# Если собираем пакеты для 32 бит
 fi
 pkgver=8.3.24        # Поменяйте на вашу версию
-pkgrel=1308          # Поменяйте на вашу версию
+pkgrel=1439          # Поменяйте на вашу версию
 _pkgname1c=1c-enterprise-$pkgver.$pkgrel
 pkgdesc="1C 8.3 for Linux"
 license=('custom')
@@ -33,19 +33,20 @@ $_pkgname1c-ws-$pkgver-$pkgrel.$_pkgarch1c.rpm
 $_pkgname1c-ws-nls-$pkgver-$pkgrel.$_pkgarch1c.rpm
 )
 
-md5sums=('772c0e5ee93b7856ed95ac04c5061e46'
-         '7f7267126c0c09f5877549690dc30b85'
-         'b72c6e15e5288186a0e7bb9b9550589e'
-         'bdf1d88b693d64604a00ee185d7397bd'
-         'ffb0f5fb98b88d592bf0b0e5a86fdf22'
-         '1fe613d5c494bcdd51aa5c76ca7c8108'
-         'fa9c2411f492fbc438c67ca9d147b082'
-         'e51b3d2778c6b1aca116f81fcbe0c494'
-         'c62b96ced0db5bf94bc59cf5c7332525'
-         '747231c43def025d71ea3931cc2155ac')
+md5sums=('433c1e4a5e51e51a4e3f1a14229df948'
+         '66e464b42d4aa716ea0b0f024f068dca'
+         '79814816de5e225d29b7f307454cf798'
+         '6fe8e5a365a5d0e65b09d6d842592052'
+         '3dc9ad5262fc147e30b4c690b3b00fb8'
+         '6612bb340bb6e6a27beef457244d69a7'
+         '390944a1b9f7945657bf093c05a2f7c7'
+         'b306140f24e4dcf782889c2a7073f8ca'
+         'f0b6fb6116d0bef261e807d9c17aed39'
+         'b90ebb3ccf490ca1c9840ab0fce1456e')
 package() {
    cd $pkgdir
    rm -f $srcdir/opt/1cv8/$arch/$pkgver.$pkgrel/libstdc++.so.6
+   rm -f $srcdir/opt/1cv8/$arch/$pkgver.$pkgrel/libgcc_s.so.1
    ln -s /usr/lib/libstdc++.so.6 $srcdir/opt/1cv8/$arch/$pkgver.$pkgrel/libstdc++.so.6
    ln -s /usr/lib/libenchant-2.so $srcdir/opt/1cv8/$arch/$pkgver.$pkgrel/libenchant.so.1
 
